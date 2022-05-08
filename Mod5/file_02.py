@@ -8,4 +8,4 @@ class Point():
 		return (self.x**2 + self.y**2)**(1/2)
 
 p1 = Point(2,3)
-print(' distance from zero-point is ', p1.distance(), ' cm ')
+print(' distance from zero-point is ', round(p1.distance(),2), ' cm ')
