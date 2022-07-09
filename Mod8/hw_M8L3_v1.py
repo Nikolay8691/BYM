@@ -97,6 +97,22 @@ class Studies(Model) :
 # qry = Studies.delete()
 # qry.execute()
 
+# # s1 = Students(st_id = 3, name = 'Andy', surname = 'Wings', age = 45, city = 'Manchester')
+# # s1.save()
+
+# student_list3 = [5, 'Dmitry', 'Fursov', 32, 'Sochi']
+# buddy = student_list3
+# c1 = buddy[0]
+# c2 = buddy[1]
+# c3 = buddy[2]
+# c4 = buddy[3]
+# c5 = buddy[4]
+# print(' c1-5 : ', c1, c2, c3, c4, c5)
+
+# s1 = Students(st_id = c1, name = c2, surname = c3, age = c4, city = c5)
+
+# s1.save()
+
 rows = Students.select()
 print('\nDatabase table_data - Students full list : ')
 for buddy in rows :
@@ -112,21 +128,7 @@ print('\nDatabase table_data -  Studies full list : ')
 for s_edu in rows :
  	print(s_edu.id_student, s_edu.id_course)
 
-# # s1 = Students(st_id = 3, name = 'Andy', surname = 'Wings', age = 45, city = 'Manchester')
-# # s1.save()
 
-# # buddy = student_list[3]
-# # c1 = buddy[0]
-# # c2 = buddy[1]
-# # c3 = buddy[2]
-# # c4 = buddy[3]
-# # c5 = buddy[4]
-# # print(' c1-5 : ', c1, c2, c3, c4, c5)
-# # print(f'st_id = {c1}, name = {c2}, surname = {c3}, age = {c4}, city = {c5}')
-# # print('st_id = %d, name = %s, surname = %s, age = %d, city = %s' %(c1,c2,c3,c4,c5))
-# # s1 = Students(f'st_id = {c1}, name = {c2}, surname = {c3}, age = {c4}, city = {c5}')
-# # s1 = Students('st_id = %d, name = %s, surname = %s, age = %d, city = %s' %(c1,c2,c3,c4,c5))
-# # s1.save()
 
 rows = Students.select().where(Students.age > 30) 
 #print(rows.sql())
